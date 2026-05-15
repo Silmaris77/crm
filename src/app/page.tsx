@@ -34,6 +34,9 @@ export default function Home() {
           <li>Add organizations-aware RLS policy baseline</li>
           <li>Create first route: /api/v1/prospecting/opportunities</li>
         </ol>
+        <p className="mt-4 text-sm text-slate-600">
+          Quick check after deploy: <span className="font-semibold">/api/health</span>
+        </p>
       </section>
     </main>
   );

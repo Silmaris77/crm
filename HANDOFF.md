@@ -2,7 +2,7 @@
 
 Date: 2026-05-15
 Owner: BVA team
-Status: Phase 1 started, scaffold ready
+Status: Phase 2 API baseline complete, deployment verification pending
 
 ## 1. Project Intent
 Build a separate CRM application for prospecting and training project pipeline management.
@@ -27,6 +27,10 @@ This is NOT a module inside BVA app. It is a separate app/repo/deployment.
 - Theme tokens created: src/lib/theme.ts
 - Supabase client helpers created: src/lib/supabase.ts
 - Starter page rebranded from default Next template to CRM Phase 1 screen.
+- SQL migration for prospecting tables added.
+- API route implemented: /api/v1/prospecting/opportunities
+- API route implemented: /api/v1/prospecting/dashboard
+- Basic auth/session guard added for protected API endpoints.
 - Build check passed: npm run build
 
 ## 4. Key Files to Keep
@@ -94,10 +98,15 @@ Phase 2 starts when all are true:
 - Main branch deploy succeeds
 
 ## 10. Phase 2 First Tasks
-- Add SQL migration for prospecting tables.
-- Add API route: /api/v1/prospecting/opportunities
-- Add basic auth/session guard using Supabase SSR.
-- Add dashboard data endpoint for KPI cards.
+- [x] Add SQL migration for prospecting tables.
+- [x] Add API route: /api/v1/prospecting/opportunities
+- [x] Add basic auth/session guard using Supabase SSR.
+- [x] Add dashboard data endpoint for KPI cards.
+
+## 11. Remaining To Confirm (Deployment)
+- Run migration in target Supabase project.
+- Set env variables in Vercel project (`NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY`).
+- Verify live endpoints return expected responses after deploy.
 
 ---
 If context is lost, start by reading this file first.
